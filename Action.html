@@ -7,6 +7,7 @@
     <title>Aksion</title>
     <style>
         body{
+            background-image: url(Images/TOP\ GUN\ 1.png);
             background-color: rgb(92, 92, 92)
         }
     h1{
@@ -29,6 +30,12 @@
        td{
         border: 3px solid black;
        }
+       ol{
+        background-color: aquamarine;
+       }
+       h3{
+        background-color: wheat;
+       }
 
     </style>
 </head>
@@ -44,145 +51,226 @@
         <li><a href="#BULLET-TRAIN">BULLET TRAIN</a></li>
     </ol>
     <br><br><br>
-    <video src="Top-Gun.mp4" controls muted title="Top Gun: Maverick " id="Top-Gun">Top Gun: Maverick </video> 
+    <video src="Images/Top-Gun.mp4" controls muted title="Top Gun: Maverick " id="Top-Gun">Top Gun: Maverick </video> 
     <h3>Top Gun: Maverick <a href="#5" >^</a></h3> 
     <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="3">
-            Pas më shumë se 30 vjet shërbimi si një nga aviatorët më të mirë të Marinës, Pete "Maverik" Mitchell do të duhet të trajnojë pilotët më të mirë për një detyrë të veçantë. Tani, Maverick duhet të përballet me fantazmat e së kaluarës së tij dhe frikën e tij më të thellë, në një mision që kërkon sakrificën përfundimtare nga ata që janë zgjedhur për të marrë pjesë.
+        <textarea name="Descriptation" id="Descriptation" cols="200" rows="3">Pas më shumë se 30 vjet shërbimi si një nga aviatorët më të mirë të Marinës, Pete "Maverik" Mitchell do të duhet të trajnojë pilotët më të mirë për një detyrë të veçantë. Tani, Maverick duhet të përballet me fantazmat e së kaluarës së tij dhe frikën e tij më të thellë, në një mision që kërkon sakrificën përfundimtare nga ata që janë zgjedhur për të marrë pjesë.
         </textarea>
         </form>
         <p class="Booking"><strong>
             Filmi do të luhet çdo ditë vetëm në këto orare <br>
-            14:30;<br>
-            17:00;<br>
-            19:30;<br>
-            22:00;<br>
-            ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-          <form action="">
-          <table>
-            <tr >
-                <td>Data e rezervimit.</td>
-                <td><input type="datetime-local" placeholder="Date of reservation."></td>
+             14:30;<br>
+             17:00;<br>
+             19:30;<br>
+             22:00;<br>
+             ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+           <form action="">
+           <table>
+             <tr >
+                <td><label for="reservation-time">Koha e rezervimit:</label>
+                    <select id="reservation-time" name="Koha-e-rezervimit">
+                    <option value="14:30">14:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="22:00">22:00</option>
+                    </select></td>
                 <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td>
-                    <input type="submit" name="Book" value="Book">
-                </td>
-            </tr>
-          </table></form>
-          
+                 <td>
+                 <form id="reservation-form">
+                    <label for="reservation-date">Data e rezervimit:</label>
+                    <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                    <button type="submit">Blej biletat</button>
+                  </form>
+                  
+                  <script>
+                    const dateInput = document.getElementById('reservation-date');
+                    const currentDate = new Date();
+                  
+                    const year = currentDate.getFullYear();
+                    const month = currentDate.getMonth() + 1;
+                    const day = currentDate.getDate();
+                  
+                    dateInput.min = `${year}-${month}-${day}`;
+                  </script></td>       
+             </tr>
+            
+           </table></form>
     <br><br><br>
-    <video src="The Greay Man.mp4" controls muted title="The Greay Man" id="The-Greay-Man">The Greay Man</video>
+    <video src="Images/The Greay Man.mp4" controls muted title="The Greay Man" id="The-Greay-Man">The Greay Man</video>
     <h3>2)The Greay Mank <a href="#5" >^</a></h3> 
     <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation"> 
-            Prodhuar nga kompania e vëllezërve Russo, AGBO, është filmi i parë në një ekskluzivitet të bazuar në romanet Greaney's Greaney. Komploti përqendrohet te agjenti i CIA-s "Sierra Six", i cili është në arrati nga ish-agjenti sociopatik dhe mercenari i CIA-s, Lloyd Hansen, pasi zbuloi sekrete korruptive për eprorin e tij.</textarea>
+        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation">Prodhuar nga kompania e vëllezërve Russo, AGBO, është filmi i parë në një ekskluzivitet të bazuar në romanet Greaney's Greaney. Komploti përqendrohet te agjenti i CIA-s "Sierra Six", i cili është në arrati nga ish-agjenti sociopatik dhe mercenari i CIA-s, Lloyd Hansen, pasi zbuloi sekrete korruptive për eprorin e tij.</textarea>
     </form>
     <p class="Booking"><strong>
-        Filmi do të luhet çdo ditë vetëm në këto orare<br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
+        Filmi do të luhet çdo ditë vetëm në këto orare <br>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
             <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="Jurassic World Dominion.mp4" controls muted title="Jurassic World Dominion " id="Jurassic-World-Dominion">Jurassic World Dominion </video>
+    <video src="Images/Jurassic World Dominion.mp4" controls muted title="Jurassic World Dominion " id="Jurassic-World-Dominion">Jurassic World Dominion </video>
     <h3>3)Jurassic World Dominion <a href="#5" >^</a></h3> 
     <form action="">
         <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation"> Filmi ndjek Owen Grady dhe Claire Dearing teksa nisin një mision shpëtimi, ndërsa Alan Grant dhe Ellie Sattler ribashkohen me Ian Malcolm për të ekspozuar një komplot nga korporata gjenomike Biosyn (një rival i dikurshëm i InGen-it të zhdukur).</textarea>
     </form>
     <p class="Booking"><strong>
-        Filmi do të luhet çdo ditë vetëm në këto orare<br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
+        Filmi do të luhet çdo ditë vetëm në këto orare <br>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
             <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="Prey.mp4" controls muted title="Prey" id="Prey">Prey</video>
+    <video src="Images/Prey.mp4" controls muted title="Prey" id="Prey">Prey</video>
     <h3>4)Prey <a href="#5" >^</a></h3> 
     <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" >
-            Historia sillet rreth Naru, një luftëtare e aftë Comanche, e cila po përpiqet të provojë veten si një gjahtare. Ajo e gjen veten që duhet të mbrojë njerëzit e saj nga një alien i egër, humanoid që gjuan njerëzit për sport, si dhe nga tregtarët francezë të gëzofit që po shkatërrojnë buallin tek i cili mbështeten për mbijetesë.</textarea>
+        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" >Historia sillet rreth Naru, një luftëtare e aftë Comanche, e cila po përpiqet të provojë veten si një gjahtare. Ajo e gjen veten që duhet të mbrojë njerëzit e saj nga një alien i egër, humanoid që gjuan njerëzit për sport, si dhe nga tregtarët francezë të gëzofit që po shkatërrojnë buallin tek i cili mbështeten për mbijetesë.</textarea>
     </form>  
     <p class="Booking"><strong>
         Filmi do të luhet çdo ditë vetëm në këto orare <br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit..</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
             <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="BULLET TRAIN.mp4" controls muted title="BULLET TRAIN" id="BULLET-TRAIN">BULLET TRAIN</video>
+    <video src="Images/BULLET TRAIN.mp4" controls muted title="BULLET TRAIN" id="BULLET-TRAIN">BULLET TRAIN</video>
     <h3>5) BULLET TRAIN<a href="#5" >^</a></h3> 
     <form action="">
         <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation"> Bullet Train është një film komedi aksion amerikan i vitit 2022, me protagonist Brad Pitt si një vrasës, i cili duhet të luftojë vrasësit e tjerë ndërsa udhëton në një tren plumbash. Filmi është drejtuar nga David Leitch nga një skenar i Zak Olkewicz, me protagonist Brad Pitt, dhe prodhuar nga Antoine Fuqua, i cili fillimisht e konceptoi filmin.</textarea>
     </form>
     <p class="Booking"><strong>
         Filmi do të luhet çdo ditë vetëm në këto orare <br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
             <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
 </body>
 </html>

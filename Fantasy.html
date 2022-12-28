@@ -6,11 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fantasy</title>
     <style>
-
+        body{
+            background-image: url(Images/THE\ BATMAN\ 1.png);
+        }
         video{
             width: 350px;
         }
-
+        .Booking{
+            color:blue;
+            background-color: rgba(245, 222, 179, 0.4)          
+        }
+        table{
+            background-color: wheat;
+            text-decoration: underline;
+        }
+        h3{
+            background-color: rgba(7, 7, 242, 0.5);
+        }
     </style>
 </head>
 <body>
@@ -25,145 +37,223 @@
         <li><a href="#THE KING'S DAUGHTER ">THE KING'S DAUGHTER </a></li>
     </ol>
     <br><br><br>
-    <video src="Everything Everywhere All At Oncel.mp4" controls muted title="Everything Everywhere All At Once " id="Everything Everywhere All At Once">Everything Everywhere All At Oncek </video> 
+    <video src="Images/Everything Everywhere All At Oncel.mp4" controls muted title="Everything Everywhere All At Once " id="Everything Everywhere All At Once">Everything Everywhere All At Oncek </video> 
     <h3>Everything Everywhere All At Once <a href="#5" >^</a></h3> 
-    <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="3">
-            Një emigrante e moshuar kineze përfshihet në një aventurë të çmendur, në të cilën ajo e vetme mund të shpëtojë botën duke eksploruar universe të tjera që lidhen me jetët që ajo mund të kishte bërë.
-        </textarea>
-        </form>
-        <p class="Booking"><strong>
-            Filmi do të luhet çdo ditë vetëm në këto orare <br>
-            14:30;<br>
-            17:00;<br>
-            19:30;<br>
-            22:00;<br>
-            ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-          <form action="">
-          <table>
-            <tr >
-                <td>Data e rezervimit.</td>
-                <td><input type="datetime-local" placeholder="Date of reservation."></td>
-                <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-            </tr>
-            <tr>
-                <td colspan="2"></td>
-                <td>
-                    <input type="submit" name="Book" value="Book">
-                </td>
-            </tr>
-          </table></form>
-          
+    <p class="Booking"><strong>
+        Filmi do të luhet çdo ditë vetëm në këto orare <br>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
+            <td><input type="number" placeholder="Number of persons" min="1" max="4"></td>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="CRIMES OF THE FUTURE.mp4" controls muted title="CRIMES OF THE FUTURE" id="CRIMES OF THE FUTURE">CRIMES OF THE FUTURE</video>
+    <video src="Images/CRIMES OF THE FUTURE.mp4" controls muted title="CRIMES OF THE FUTURE" id="CRIMES OF THE FUTURE">CRIMES OF THE FUTURE</video>
     <h3>2)CRIMES OF THE FUTURE <a href="#5" >^</a></h3> 
     <form action="">
         <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation">Ai ndjek një dyshe artistësh të performancës që kryejnë operacione për audiencën, në një botë të ardhshme ku evolucioni njerëzor është përshpejtuar për disa individë. Edhe pse filmi ndan titullin e tij me filmin e Cronenberg të vitit 1970 me të njëjtin emër, ai nuk është një ribërje pasi historia dhe koncepti nuk kanë lidhje.</textarea>
     </form>
     <p class="Booking"><strong>
-        Filmi do të luhet çdo ditë vetëm në këto orare<br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
-            <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+        Filmi do të luhet çdo ditë vetëm në këto orare <br>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
+            <td><input type="number" placeholder="Number of persons" min="1" max="4"></td>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="NOPE.mp4" controls muted title="NOPE " id="NOPE">NOPE </video>
+    <video src="Images/NOPE.mp4" controls muted title="NOPE " id="NOPE">NOPE </video>
     <h3>3)NOPE <a href="#5" >^</a></h3> 
     <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation"> Jo (i stilizuar si NOPE) është një film horror fantashkencë-fiction neo-perëndimor i vitit 2022 i drejtuar, shkruar dhe bashkëprodhuar nga Jordan Peele nën flamurin e tij Monkeypaw Productions. Në të interpretohen Daniel Kaluuya dhe Keke Palmer në rolin e vëllezërve dhe motrave që grinden me kuaj që përpiqen të kapin prova të një objekti fluturues të paidentifikuar. Në role dytësore luajnë Steven Yeun, Michael Wincott, Brandon Perea dhe Keith David.
+        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation"> NOPE (i stilizuar si NOPE) është një film horror fantashkencë-fiction neo-perëndimor i vitit 2022 i drejtuar, shkruar dhe bashkëprodhuar nga Jordan Peele nën flamurin e tij Monkeypaw Productions. Në të interpretohen Daniel Kaluuya dhe Keke Palmer në rolin e vëllezërve dhe motrave që grinden me kuaj që përpiqen të kapin prova të një objekti fluturues të paidentifikuar. Në role dytësore luajnë Steven Yeun, Michael Wincott, Brandon Perea dhe Keith David.
         </textarea>
     </form>
     <p class="Booking"><strong>
-        Filmi do të luhet çdo ditë vetëm në këto orare<br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
-            <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+        Filmi do të luhet çdo ditë vetëm në këto orare <br>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
+            <td><input type="number" placeholder="Number of persons" min="1" max="4"></td>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="THE BATMAN.mp4" controls muted title="THE BATMAN" id="THE BATMAN">THE BATMAN</video>
+    <video src="Images/THE BATMAN.mp4" controls muted title="THE BATMAN" id="THE BATMAN">THE BATMAN</video>
     <h3>4)THE BATMAN <a href="#5" >^</a></h3> 
     <form action="">
         <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" >Batman fillimisht u prezantua si një vigjilent i pamëshirshëm që vriste ose gjymtonte shpesh kriminelët, por evoluoi në një personazh me një kod moral të rreptë dhe ndjenjë të fortë drejtësie. Ndryshe nga shumica e superheronjve, Batman nuk posedon asnjë superfuqi, përkundrazi mbështetet në intelektin, aftësitë luftarake dhe pasurinë e tij.</textarea>
     </form>  
     <p class="Booking"><strong>
         Filmi do të luhet çdo ditë vetëm në këto orare <br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
-            <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
+            <td><input type="number" placeholder="Number of persons" min="1" max="4"></td>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
-    <video src="THE KING'S DAUGHTER.mp4" controls muted title="THE KING'S DAUGHTER" id="THE KING'S DAUGHTER">THE KING'S DAUGHTER</video>
+    <video src="Images/THE KING'S DAUGHTER.mp4" controls muted title="THE KING'S DAUGHTER" id="THE KING'S DAUGHTER">THE KING'S DAUGHTER</video>
     <h3>5) THE KING'S DAUGHTER<a href="#5" >^</a></h3> 
     <form action="">
-        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation">
-            Me shpresën për të arritur pavdekësinë, Mbreti Louis XIV (Pierce Brosnan) kap një sirenë dhe vjedh forcën e saj jetësore, por një zbulim nga vajza e tij e paligjshme kërcënon të prishë planet e mbretit.</textarea>
+        <textarea name="Descriptation" id="Descriptation" cols="200" rows="5" id="Descriptation">Me shpresën për të arritur pavdekësinë, Mbreti Louis XIV (Pierce Brosnan) kap një sirenë dhe vjedh forcën e saj jetësore, por një zbulim nga vajza e tij e paligjshme kërcënon të prishë planet e mbretit.</textarea>
     </form>
     <p class="Booking"><strong>
         Filmi do të luhet çdo ditë vetëm në këto orare <br>
-        14:30;<br>
-        17:00;<br>
-        19:30;<br>
-        22:00;<br>
-        ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
-      <form action="">
-      <table>
-        <tr >
-            <td>Data e rezervimit.</td>
-            <td><input type="datetime-local" placeholder="Date of reservation."></td>
-            <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-        </tr>
-        <tr>
-            <td colspan="2"></td>
-            <td>
-                <input type="submit" name="Book" value="Book">
-            </td>
-        </tr>
-      </table></form>
+         14:30;<br>
+         17:00;<br>
+         19:30;<br>
+         22:00;<br>
+         ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
+       <form action="">
+       <table>
+         <tr >
+            <td><label for="reservation-time">Koha e rezervimit:</label>
+                <select id="reservation-time" name="Koha-e-rezervimit">
+                <option value="14:30">14:30</option>
+                <option value="17:00">17:00</option>
+                <option value="19:30">19:30</option>
+                <option value="22:00">22:00</option>
+                </select></td>
+            <td><input type="number" placeholder="Number of persons" min="1" max="4"></td>
+             <td>
+             <form id="reservation-form">
+                <label for="reservation-date">Data e rezervimit:</label>
+                <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+                <button type="submit">Blej biletat</button>
+              </form>
+              
+              <script>
+                const dateInput = document.getElementById('reservation-date');
+                const currentDate = new Date();
+              
+                const year = currentDate.getFullYear();
+                const month = currentDate.getMonth() + 1;
+                const day = currentDate.getDate();
+              
+                dateInput.min = `${year}-${month}-${day}`;
+              </script></td>       
+         </tr>
+        
+       </table></form>
     <br><br><br>
 </body>
 </html>

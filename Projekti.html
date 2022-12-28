@@ -7,7 +7,7 @@
     <title>Projekti në ueb 1</title>
     <style>
         body{
-            background-image: url(112.png);
+            background-image: url(Images/112.png);
             background-repeat: repeat;
             width: 300;        
         }
@@ -62,82 +62,112 @@
     Merrni familjen,të dashurën dhe miqtë tuaj dhe ejani të argëtoheni së bashku.
     </p>
     <p class="New"> Filma të rinjë</p><br><br><br>
-   <video src="Avatar-2.mp4" controls muted>Avatar 2 The way of water</video>
+   <video src="Images/Avatar-2.mp4" controls muted>Avatar 2 The way of water</video>
    <form action="">
    <textarea name="Descriptation" id="Descriptation" cols="200" rows="5">I vendosur më shumë se një dekadë pas ngjarjeve të filmit të parë, "Avatar: The Way of Water" fillon të tregojë historinë e familjes Sully (Jake, Neytiri dhe fëmijët e tyre), telashet që i pasojnë, gjatësitë që kalojnë. për të mbajtur njëri-tjetrin të sigurt, betejat që luftojnë për të qëndruar gjallë dhe tragjeditë që durojnë. Me regji nga James Cameron dhe prodhuar nga Cameron dhe Jon Landau, Lightstorm Entertainment Production luajnë Sam Worthington, Zoe Saldaña, Sigourney Weaver, Stephen Lang dhe Kate Winslet. Skenari nga James Cameron & Rick Jaffa & Amanda Silver. Histori nga James Cameron & Rick Jaffa & Amanda Silver & Josh Friedman & Shane Salerno. David Valdes dhe Richard Baneham shërbejnë si producentë ekzekutivë të filmit.</textarea>
   </form>
-  <p class="Booking"><strong>
-    Filmi do të luhet çdo ditë vetëm në këto orare<br>
-    14:30;<br>
-    17:00;<br>
-    19:30;<br>
-    22:00;<br>
-    ,prandaj ju lutemi kini kujdes gjatë rezervimit..</strong></p>
   <form action="">
-  <table>
-    <tr >
-        <td>Data e rezervimit.</td>
-        <td><input type="datetime-local" placeholder="Date of reservation."></td>
-        <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-    </tr>
-    <tr>
-        <td colspan="2"></td>
-        <td>
-            <input type="submit" name="Book" value="Book">
-        </td>
-    </tr>
-  </table></form>
+    <table>
+      <tr >
+         <td><label for="reservation-time">Koha e rezervimit:</label>
+             <select id="reservation-time" name="Koha-e-rezervimit">
+             <option value="14:30">14:30</option>
+             <option value="17:00">17:00</option>
+             <option value="19:30">19:30</option>
+             <option value="22:00">22:00</option>
+             </select></td>
+         <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
+          <td>
+          <form id="reservation-form">
+             <label for="reservation-date">Data e rezervimit:</label>
+             <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+             <button type="submit">Blej biletat</button>
+           </form>
+           
+           <script>
+             const dateInput = document.getElementById('reservation-date');
+             const currentDate = new Date();
+           
+             const year = currentDate.getFullYear();
+             const month = currentDate.getMonth() + 1;
+             const day = currentDate.getDate();
+           
+             dateInput.min = `${year}-${month}-${day}`;
+           </script></td>       
+      </tr>
+     
+    </table></form>
   <br><br><br>
-  <video src="Black Panther 2.mp4" controls muted>Black Panther 2 Wakanda Forever</video>
+  <video src="Images/Black Panther 2.mp4" controls muted>Black Panther 2 Wakanda Forever</video>
   <form action="">
     <textarea name="Descriptation" id="Descriptation" cols="200" rows="5">Black Panther: Wakanda Forever është një film superhero amerikan i vitit 2022 i bazuar në personazhin e Marvel Comics Black Panther. Prodhuar nga Marvel Studios dhe shpërndarë nga Walt Disney Studios Motion Pictures, është vazhdimi i Black Panther (2018) dhe filmi i 30-të në Marvel Cinematic Universe (MCU). Me regji nga Ryan Coogler, i cili bashkë-shkruan skenarin me Joe Robert Cole, filmi luan Letitia Wright si Shuri / Black Panther, së bashku me Lupita Nyong'o, Danai Gurira, Winston Duke, Florence Kasumba, Dominique Thorne, Michaela Coel, Tenoch Huerta. Mejía, Martin Freeman, Julia Louis-Dreyfus dhe Angela Bassett. Në film, udhëheqësit e Wakanda luftojnë për të mbrojtur kombin e tyre në prag të vdekjes së mbretit T'Challa.</textarea>
    </form>
-   <p class="Booking"><strong>
-    Filmi do të luhet çdo ditë vetëm në këto orare <br>
-     14:30;<br>
-     17:00;<br>
-     19:30;<br>
-     22:00;<br>
-     ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
    <form action="">
-   <table>
-     <tr >
-         <td>DData e rezervimit.</td>
-         <td><input type="datetime-local" placeholder="Date of reservation." min="datetime-local"></td>
+    <table>
+      <tr >
+         <td><label for="reservation-time">Koha e rezervimit:</label>
+             <select id="reservation-time" name="Koha-e-rezervimit">
+             <option value="14:30">14:30</option>
+             <option value="17:00">17:00</option>
+             <option value="19:30">19:30</option>
+             <option value="22:00">22:00</option>
+             </select></td>
          <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-     </tr>
-     <tr>
-         <td colspan="2"></td>
-         <td>
-             <input type="submit" name="Book" value="Book">
-         </td>
-     </tr>
-   </table></form>
-   <video src="Creed 3.mp4" controls muted>Avatar 2 The way of water</video>
+          <td>
+          <form id="reservation-form">
+             <label for="reservation-date">Data e rezervimit:</label>
+             <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+             <button type="submit">Blej biletat</button>
+           </form>
+           
+           <script>
+             const dateInput = document.getElementById('reservation-date');
+             const currentDate = new Date();
+           
+             const year = currentDate.getFullYear();
+             const month = currentDate.getMonth() + 1;
+             const day = currentDate.getDate();
+           
+             dateInput.min = `${year}-${month}-${day}`;
+           </script></td>       
+      </tr>
+     
+    </table></form>
+   <video src="Images/Creed 3.mp4" controls muted>Avatar 2 The way of water</video>
    <form action="">
    <textarea name="Descriptation" id="Descriptation" cols="100" rows="5">Pas dominimit të botës së boksit, Adonis Creed (Michael B. Jordan) ka lulëzuar si në karrierë ashtu edhe në jetën familjare. Kur një shok fëmijërie dhe ish-mjeshtëror i boksit, Damian (Jonathan Majors), rishfaqet pas vuajtjes së një dënimi të gjatë në burg, ai është i etur të provojë se e meriton goditjen e tij në ring.</textarea>
   </form>
-  <p class="Booking"><strong>
-    Filmi do të luhet çdo ditë vetëm në këto orare <br>
-    14:30;<br>
-    17:00;<br>
-    19:30;<br>
-    22:00;<br>
-    ,prandaj ju lutemi kini kujdes gjatë rezervimit.</strong></p>
   <form action="">
-  <table>
-    <tr >
-        <td>Data e rezervimit.</td>
-        <td><input type="datetime-local" placeholder="Date of reservation."></td>
-        <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
-    </tr>
-    <tr>
-        <td colspan="2"></td>
-        <td>
-            <input type="submit" name="Book" value="Book">
-        </td>
-    </tr>
-  </table></form>
+    <table>
+      <tr >
+         <td><label for="reservation-time">Koha e rezervimit:</label>
+             <select id="reservation-time" name="Koha-e-rezervimit">
+             <option value="14:30">14:30</option>
+             <option value="17:00">17:00</option>
+             <option value="19:30">19:30</option>
+             <option value="22:00">22:00</option>
+             </select></td>
+         <td><input type="number" placeholder="Number of persons" min="0" max="4"></td>
+          <td>
+          <form id="reservation-form">
+             <label for="reservation-date">Data e rezervimit:</label>
+             <input type="date" id="reservation-date" name="Data-e-rezervimit.">
+             <button type="submit">Blej biletat</button>
+           </form>
+           
+           <script>
+             const dateInput = document.getElementById('reservation-date');
+             const currentDate = new Date();
+           
+             const year = currentDate.getFullYear();
+             const month = currentDate.getMonth() + 1;
+             const day = currentDate.getDate();
+           
+             dateInput.min = `${year}-${month}-${day}`;
+           </script></td>       
+      </tr>
+     
+    </table></form>
   <br><br><br>
   <p class="New">
    <em> Duke qenë se është fundviti, po ju tregojmë listën e 5 filmave më të shikuar në 4 kategori, ndaj ju lutemi ndiqni lidhjet e mëposhtme për më shumë </em></p>
@@ -155,7 +185,5 @@
        
     </li>
   </ol>
-
-
 </body>
 </html>

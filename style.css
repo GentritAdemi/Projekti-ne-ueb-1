@@ -1,0 +1,121 @@
+
+body
+{
+        background-image: url('00.jpg');
+        color:var(--bg-color)
+
+}
+
+
+section
+{
+    padding: 4.5rem 0 1.5rem;
+}
+
+
+
+
+
+.container
+{
+    width: 100%;
+    min-height: 640px;
+    display: flex ;
+    position: relative;
+    align-items: center;
+    /* background: rgb(2,3,7,0.4); */
+}
+.container img{
+    position: absolute;
+    width: 80%;
+    height:80%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    border-radius: 10px;
+
+}
+.swiper-pagination-bullet
+{
+width: 6px !important;
+height: 6px !important;
+border-radius: 0.2rem !important;
+background: var(--bg-color) !important;
+opacity: 1 !important;
+}
+
+
+.bxs-menu
+{
+    background-image: url('a22.jpg');
+    border-radius: 7px;
+    text-align: center;
+
+
+}
+
+.bxs-menu ul
+{
+    display: flex;
+    list-style: none;
+    /* color: #fff; */
+    color: white;
+
+}
+.bxs-menu ul li
+{
+    width: 120px;
+    margin: 10px;
+    padding: 10px;
+
+
+}
+.bxs-menu ul li:hover
+{
+    background:#2596BE;
+    border-radius: 5px;
+
+
+
+}
+.sub-menu-1
+{
+    display: none;
+  
+
+}
+.bxs-menu ul li:hover .sub-menu-1
+{
+display: block;
+position: absolute;
+background:#263F48;
+
+margin: 5px;
+margin-left: -10px;
+border-radius: 7px;
+transition: 4s;
+}
+.bxs-menu ul li:hover .sub-menu-1 ul
+{
+    display: block;
+    margin: 10px;
+    transition: 4s;
+
+
+}
+.bxs-menu ul li:hover .sub-menu-1 ul li
+{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px doted #fff;
+    border-radius: 5px;
+    text-align: left;
+  
+
+}
+
+
+a
+{
+    color: white;
+}
